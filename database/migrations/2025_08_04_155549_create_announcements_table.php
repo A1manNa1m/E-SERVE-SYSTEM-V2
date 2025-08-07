@@ -13,6 +13,21 @@ return new class extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id'); //creates the column.
+            $table->foreign('user_id')->references('id')->on('users'); //enforces the relationship between tables.
+            $table->string('title');
+            $table->string('description');
+            $table->string('type');
+            $table->string('category');
+            $table->string('audience');
+            $table->date('date');
+            $table->time('timestart');
+            $table->time('timeend');
+            $table->string('contact');
+            $table->string('extraInfo');
+            $table->string('status');
+            $table->string('organizer');
+            $table->string('image');
             $table->timestamps();
         });
     }

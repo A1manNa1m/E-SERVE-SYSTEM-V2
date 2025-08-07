@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('favourites', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id'); // correct column name
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('favouritable_id'); //when user click fav button, it will capture the id of item(event,announcement,service,product)
+            $table->string('favouritable_type'); // this will capture the type of item (event,announcement,service,product)
             $table->timestamps();
         });
     }

@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id'); //creates the column.
+            $table->foreign('user_id')->references('id')->on('users'); //enforces the relationship between tables.
+            $table->string('name');
+            $table->string('description');
+            $table->string('type');
+            $table->string('price');
+            $table->string('quantity');
+            $table->string('quality');
+            $table->string('contact');
+            $table->string('extraInfo');
+            $table->string('status');
+            $table->string('organizer');
+            $table->string('image');
             $table->timestamps();
         });
     }
