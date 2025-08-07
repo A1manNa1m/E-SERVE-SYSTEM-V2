@@ -16,6 +16,36 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('annoucement') }}" :active="request()->routeIs('annoucement')">
+                        {{ __('Annoucement') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('event') }}" :active="request()->routeIs('event')">
+                        {{ __('Event') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('service') }}" :active="request()->routeIs('service')">
+                        {{ __('Service') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('product') }}" :active="request()->routeIs('product')">
+                        {{ __('Product') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('favourite') }}" :active="request()->routeIs('favourite')">
+                        {{ __('Favourite') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('approval') }}" :active="request()->routeIs('approval')">
+                        {{ __('Approval') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">

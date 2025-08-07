@@ -13,7 +13,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+        $announ = \App\Models\Announcement::all();
+        return view('announcement', compact('announ'));
     }
 
     /**

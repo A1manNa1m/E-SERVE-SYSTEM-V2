@@ -13,7 +13,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $service = \App\Models\Service::all();
+        return view('service', compact('service'));
     }
 
     /**
