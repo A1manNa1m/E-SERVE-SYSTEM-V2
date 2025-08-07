@@ -29,7 +29,6 @@ return new class extends Migration
             $table->string('organizer');
             $table->string('image');
             $table->timestamps();
-            $table->timestamps();
         });
     }
 
